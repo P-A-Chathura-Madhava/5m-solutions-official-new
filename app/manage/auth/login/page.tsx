@@ -9,8 +9,6 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { toast } from 'sonner';
 import { Building2 } from 'lucide-react';
-import Image from 'next/image';
-import companyLogo from "@/public/5mLogo.png";
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -40,9 +38,8 @@ export default function LoginPage() {
       <Card className="w-full max-w-md border-gray-700 bg-gray-800/50 backdrop-blur">
         <CardHeader className="space-y-3 text-center">
           <div className="flex justify-center">
-            <div className="rounded-full bg-gray-700"> {/* p-3 */}
-              {/* <Building2 className="h-8 w-8 text-gray-100" /> */}
-              <Image className='w-12 h-12' src={companyLogo} alt='5M Solutions Logo' />
+            <div className="rounded-full bg-gray-700 p-3">
+              <Building2 className="h-8 w-8 text-gray-100" />
             </div>
           </div>
           <CardTitle className="text-2xl text-gray-100">5M Solutions</CardTitle>
