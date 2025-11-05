@@ -21,16 +21,21 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
 
-    const success = login(email, password);
+    try {
+      const success = login(email, password);
 
-    if (success) {
-      toast.success('Login successful');
-      router.push('/manage');
-    } else {
-      toast.error('Invalid credentials');
+      if (success) {
+        toast.success('Login successful');
+        router.push('/manage');
+      } else {
+        toast.error('Invalid credentials');
+      }
+    } catch (error) {
+      toast.error('Login failed');
+      console.error(error);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (

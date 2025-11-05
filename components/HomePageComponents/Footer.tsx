@@ -2,8 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { Sparkles, Mail, Phone, MapPin } from 'lucide-react';
-import Image from 'next/image';
-import companyLogo from "@/public/5mLogo.png";
 
 const footerLinks = {
   Company: ['About Us', 'Our Team', 'Careers', 'Blog'],
@@ -30,8 +28,7 @@ export default function Footer() {
               viewport={{ once: true }}
               className="flex items-center space-x-2 mb-4"
             >
-              {/* <Sparkles className="w-8 h-8 text-primary glow-effect" /> */}
-              <Image className='w-12 h-12' src={companyLogo} alt='5M Solutions Logo' />
+              <Sparkles className="w-8 h-8 text-primary glow-effect" />
               <span className="text-2xl font-bold text-gradient">5M Solutions</span>
             </motion.div>
             <p className="text-foreground/70 mb-6 max-w-sm">
